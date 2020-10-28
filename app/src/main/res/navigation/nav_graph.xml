@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainPageFragment">
+    <fragment
+        android:id="@+id/mainPageFragment"
+        android:name="com.example.pokemonpagegyak.ui.MainPageFragment"
+        android:label="fragment_mainlist"
+        tools:layout="@layout/fragment_mainlist" >
+        <action
+            android:id="@+id/action_mainPageFragment_to_fragmentDetails"
+            app:destination="@id/fragmentDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDetails"
+        android:name="com.example.pokemonpagegyak.ui.fragmentDetails"
+        android:label="Részletek">
+        <argument
+            android:name="ids"
+            app:argType="string"
+            android:defaultValue="0" />
+    </fragment>
+</navigation>
